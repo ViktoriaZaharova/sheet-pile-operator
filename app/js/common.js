@@ -50,3 +50,17 @@ $('.sidebar-close').click(function () {
 $('.btn-filter').click(function () {
    $('.sidebar').fadeToggle();
 });
+
+$('ul.tabs__caption').on('click', 'li:not(.active)', function () {
+    $(this)
+        .addClass('active').siblings().removeClass('active')
+        .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+});
+
+$('.similar-products-slider').slick({
+    slidesToShow: 4,
+    dots: true,
+    arrows: true,
+    appendArrows: '.slider-nav',
+    appendDots: '.slider-nav'
+});
