@@ -42,3 +42,11 @@ $(document).mouseup(function (e) { // событие клика по веб-до
         btn.removeClass('active');
     }
 });
+
+$('.sidebar-close').click(function () {
+   $('.sidebar').fadeOut();
+});
+
+$('.btn-filter').click(function () {
+   $('.sidebar').fadeToggle();
+});
