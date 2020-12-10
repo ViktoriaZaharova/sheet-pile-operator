@@ -861,6 +861,7 @@ h1
 .product-description
   width: calc(100% - 520px)
   padding: 0 0 0 104px
+  font-size: 16px
   .list-characteristic
     font-size: 16px
     margin: 0 0 40px
@@ -976,6 +977,74 @@ h2
   align-items: center
   justify-content: center
   margin: 50px auto 40px
+  position: relative
+
+.slick-dots
+  bottom: 0
+  position: relative
+  width: auto
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 30px
+  li
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    margin: 0
+    padding: 0
+    position: relative
+    transition: .3s ease
+    &:before
+      content: ''
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      border-radius: 50%
+      background: #BDBDBD
+      width: 4px
+      height: 4px
+      transition: .3s ease
+    button
+      display: none
+  .slick-active
+    border: 1px solid #BDBDBD
+    background: #F2F2F2
+    &:before
+      background: #131313
+
+.similar-products-slider
+  width: 100%
+  .product-card
+    margin: 0 auto
+    width: 100%
+
+.slick-arrow
+  position: relative
+  transform: none
+  left: 0
+  top: 0
+  right: 0
+  width: 14px
+  height: 20px
+  &:before
+    display: none
+  svg
+    width: 100%
+    height: 100%
+    fill: #131313
+    transition: .3s ease
+  &:hover
+    svg
+      fill: $accent
+
+.slick-next
+  order: 1
+
+.mobile-title
+  display: none
+  width: 100%
 
 @import "media"
 // Всегда в конце

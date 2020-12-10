@@ -61,6 +61,38 @@ $('.similar-products-slider').slick({
     slidesToShow: 4,
     dots: true,
     arrows: true,
+    prevArrow: '<button type="button" class="slick-prev"><svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+        '<path d="M9.69974 0L0.000104904 9.70024L9.65474 19.354L10.3617 18.646L1.41432 9.70024L10.4067 0.708L9.69974 0Z"/>\n' +
+        '<path d="M12.5289 2.82898L5.65709 9.70022L12.4829 16.525L13.8969 15.111L8.53851 9.67698L13.9429 4.24298L12.5289 2.82898Z"/>\n' +
+        '</svg>\n</button>',
+    nextArrow: '<button type="button" class="slick-next"><svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
+        '<path d="M4.24313 0L13.9428 9.70024L4.28813 19.354L3.58113 18.646L12.5286 9.70024L3.53613 0.708L4.24313 0Z"/>\n' +
+        '<path d="M1.414 2.82898L8.28578 9.70022L1.46 16.525L0.046 15.111L5.40436 9.67698L0 4.24298L1.414 2.82898Z"/>\n' +
+        '</svg>\n</button>',
     appendArrows: '.slider-nav',
-    appendDots: '.slider-nav'
+    appendDots: '.slider-nav',
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
 });
+
+if ($(".product-page h1").length){
+    $('.product-page h1').clone().appendTo('.mobile-title');
+}
